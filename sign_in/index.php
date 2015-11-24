@@ -7,14 +7,11 @@
 
 <div class="row">
     <div class="small-12 columns">
-        <h1>Sign In</h1>
-    </div>
-</div>
-
-<div class="row">
-    <div class="small-12 columns">
         <form>
-          <fieldset>
+          <fieldset class="panel">
+            <center>
+              <h1>Sign In</h1><br>
+            </center>
             <label>
               <input type="text" id="username" placeholder="Username">
             </label>

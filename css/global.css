@@ -2,7 +2,9 @@
  * GLOBAL STYLE SHEET
 */
 
-
+body {
+  background-image: url("/img/bg.png");
+}
 .container {
     margin-top: 5%;
     margin-bottom: 5%;
@@ -20,7 +22,7 @@
 
 .footer {
 
-  background-color: #2980b9;
+  background-color: #333333;
 
   padding: 2rem 4rem;
 
@@ -28,7 +30,7 @@
 
   color: #fff;
   
-  min-height: 200px;
+  min-height: 100px;
 
 }
 
