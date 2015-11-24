@@ -3,77 +3,12 @@
 */
 
 
-.has-form {
-
-  position: absolute;
-
-  top: 0;
-
-  left: 6rem;
-
-  min-width: 14rem; }
-
-  @media only screen and (max-width: 40em) {
-
-    .has-form {
-
-      min-width: 10rem;
-
-      top: 0.5rem; }
-
-      .has-form .button {
-
-        height: 1.85rem; } }
-
-.post-card {
-
-  border: 1px solid #d7d7d7;
-
-  margin-bottom: 1.5rem;
-
-  box-shadow: 2px 4px 5px 0px #d7d7d7; }
-
-  .post-card .card-content {
-
-    background: #fff;
-
-    margin: 1.25rem; }
-
-    .post-card .card-content .post-author {
-
-      text-align: center; }
-
-    .post-card .card-content h4 {
-
-      color: #CF000F; }
-
-    .post-card .card-content p {
-
-      color: #757D75; }
-
-    .post-card .card-content a i {
-
-      font-weight: 300;
-
-      color: #757D75;
-
-      margin: 0 .5rem;
-
-      padding: 5px 7px 5px 7px;
-
-      border: 1px solid #757D75;
-
-      border-radius: 50%; }
-
-    .post-card .card-content img.post-icon {
-
-      position: absolute;
-
-      width: 3rem;
-
-      border-radius: 50%;
-
-      margin-top: -0.55rem; }
+.container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
 
 .full-width {
 
@@ -92,6 +27,8 @@
   text-align: center;
 
   color: #fff;
+  
+  min-height: 200px;
 
 }
 

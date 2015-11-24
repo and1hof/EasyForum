@@ -5,7 +5,7 @@
 <!-- NAV    -->
 <?php echo get_content('../components/nav.php'); ?>
 
-Sign Up
+Viewing Post
 
 <!-- FOOTER -->
 <?php echo get_content('../components/footer.php'); ?>

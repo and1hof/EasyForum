@@ -1,17 +1,20 @@
-<!-- Footer -->
-
-<footer class="footer">
-
+<!-- end container -->
+</div>
+<footer class="footer" id="footer">
   <div class="row full-width">
-    I am the footer.
+    <a href="/">Home</a>
   </div>
-
 </footer>
+      <!-- SCRIPTS -->
+      <script src="js/jquery.js"></script>
+      <script src="js/foundation.js"></script>
+      
+      <script type="text/javascript">
 
-      <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-      <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-      <script>
-         $(document).foundation();
+        $(document).ready(function(){
+            $(document).foundation();
+        });
+
          $(window).bind("load", function () {
 		    var footer = $("#footer");
 		    var pos = footer.position();
