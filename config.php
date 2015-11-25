@@ -8,10 +8,10 @@ $forumName = 'test';
 $isConfigured = 'true';
 
 
-$mysqlUsername = 'joe';
+$mysqlUsername = 'test';
 
 
-$mysqlPassword = 'testtest';
+$mysqlPassword = 'test';
 
 
 ?>

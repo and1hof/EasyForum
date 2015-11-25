@@ -5,6 +5,8 @@
 <!-- NAV    -->
 <?php echo get_content('components/nav.php'); ?>
 
+<?php if (isSet($isConfigured) && $isConfigured == 'true') { echo "ERROR: Forum Already Configured. See config.php."; die; } ?>
+
 <div class="row">
     <div class="small-12 columns">
         <form action="installer.php" method="post">

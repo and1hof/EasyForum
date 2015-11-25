@@ -47,3 +47,7 @@ $$label4 = $var_str4;\n\n
 fwrite($fh, $configData);
 fclose($fh);
 
+// success message to user.
+echo "config.php successfully configured, and MySQL database has been populated.";
+
+
