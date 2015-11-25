@@ -5,10 +5,10 @@
 $forumName = 'test';
 
 
-$isConfigured = 'false';
+$isConfigured = 'true';
 
 
-$mysqlUsername = 'test';
+$mysqlUsername = 'Test';
 
 
 $mysqlPassword = 'test';

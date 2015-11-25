@@ -6,5 +6,4 @@ function get_content($file)
    $template = file_get_contents($file);
    return $template;
 }
-
 ?>
