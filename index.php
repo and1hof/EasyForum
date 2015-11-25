@@ -5,10 +5,6 @@
 <!-- NAV    -->
 <?php echo get_content('components/nav.php'); ?>
 
-
-
-
-
 <div class="row">
 
     <div class="small-12 columns">
