@@ -2,8 +2,6 @@
 <?php include('application.php'); ?>
 <!-- HEADER -->
 <?php echo get_content('components/header.php'); ?>
-<!-- NAV    -->
-<?php echo get_content('components/nav.php'); ?>
 
 <?php if (isSet($isConfigured) && $isConfigured == 'true') { echo "ERROR: Forum Already Configured. See config.php."; die; } ?>
 
@@ -51,6 +49,3 @@
         </form>
     </div>
 </div>
-
-<!-- FOOTER -->
-<?php echo get_content('components/footer.php'); ?>

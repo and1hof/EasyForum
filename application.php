@@ -4,4 +4,3 @@
 
 <!-- PARTIALS CONTROLLER -->
 <?php include('partials_controller.php'); ?>
-

@@ -5,6 +5,10 @@
 <!-- NAV    -->
 <?php echo get_content('components/nav.php'); ?>
 
+<?php if (!isSet($isConfigured) || $isConfigured != 'true') {
+echo "<script>window.location='/setup.php';</script>";
+} ?>
+
 <div class="row">
 
     <div class="small-12 columns">

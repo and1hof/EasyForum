@@ -5,7 +5,7 @@
 $forumName = 'test';
 
 
-$isConfigured = 'true';
+$isConfigured = 'false';
 
 
 $mysqlUsername = 'test';
