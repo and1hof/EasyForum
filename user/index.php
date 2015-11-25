@@ -3,6 +3,7 @@
 <!-- HEADER -->
 <?php echo get_content('../components/header.php'); ?>
 <!-- NAV    -->
+<?php echo '<script>var forumName = "'.$forumName.'";</script>'; ?>
 <?php echo get_content('../components/nav.php'); ?>
 
 Users Profile
