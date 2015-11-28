@@ -3,8 +3,14 @@
 <!-- HEADER -->
 <?php echo get_content('components/header.php'); ?>
 
-<?php if (isSet($isConfigured) && $isConfigured == 'true') { echo "ERROR: Forum Already Configured. See config.php."; die; } ?>
-
+<?php if (isSet($isConfigured) && $isConfigured == 'true') { 
+ ?>
+<html>
+	<meta http-equiv="refresh" content="0; url=/" />
+</html>   	
+<?php
+}
+ ?>
 <div class="row">
     <div class="small-12 columns">
         <form action="installer.php" method="post">
@@ -24,7 +30,9 @@
               <label>
                 <input type="password" name="mysqlPassword" placeholder="MySQL Password">
               </label>
-
+			  <label>
+                <input type="text" name="mysqlHost" placeholder="MySQL Host Name">
+              </label>
               <h5>Forum Admin</h5>
               <label>
                 <input type="text" name="adminUsername" placeholder="Admin Username">
@@ -35,7 +43,9 @@
               <label>
                 <input type="password" name="adminPassword2" placeholder="Admin Password (Repeat)">
               </label>
-
+			  <label>
+                <input type="text" name="adminEmail" placeholder="Admin Email">
+              </label>
               <h5>Global Variables</h5>
               <label>
                 <input type="text" name="forumName" placeholder="Forum Name">
