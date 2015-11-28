@@ -51,7 +51,7 @@
                 <input type="text" name="forumName" placeholder="Forum Name">
               </label>
 
-
+ 
               <center>
                   <input type="submit" class="button">
               </center>
