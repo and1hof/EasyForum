@@ -1,10 +1,9 @@
 <!-- GLOBAL LAYOUT MANAGER -->
 <?php include('../application.php'); ?>
 <!-- HEADER -->
-<?php echo get_content('../components/header.php'); ?>
+<?php include('../components/header.php'); ?>
 <!-- NAV    -->
-<?php echo '<script>var forumName = "'.$forumName.'";</script>'; ?>
-<?php echo get_content('../components/nav.php'); ?>
+<?php include('../components/nav.php'); ?>
 
 <?php
   // first, check if the user is already signed in.
@@ -69,6 +68,7 @@
         $_SESSION['admin']      = $row['admin'];
         $_SESSION['moderator']  = $row['moderator'];
       } // store some data about the user 
+      $_SESSION['signed_in'] = true;
       echo 'Sign in successful, '.$_SESSION['username']."!";
     }
   }

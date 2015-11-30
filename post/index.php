@@ -1,10 +1,9 @@
 <!-- GLOBAL LAYOUT MANAGER -->
 <?php include('../application.php'); ?>
 <!-- HEADER -->
-<?php echo get_content('../components/header.php'); ?>
+<?php include('../components/header.php'); ?>
 <!-- NAV    -->
-<?php echo '<script>var forumName = "'.$forumName.'";</script>'; ?>
-<?php echo get_content('../components/nav.php'); ?>
+<?php include('../components/nav.php'); ?>
 
 Viewing Post
 

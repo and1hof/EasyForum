@@ -9,7 +9,8 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li><a href="/sign_out.php">Sign Out</a></li>
+      <li><a href="/sign_up">Sign Up</a></li>
+      <li><a href="/sign_in">Sign In</a></li>
     </ul>
   </section>
   
