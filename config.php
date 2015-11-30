@@ -2,16 +2,22 @@
 <?php
 
 
-$forumName = 'test';
+$forumName = 'TestForum';
 
 
 $isConfigured = 'true';
 
 
-$mysqlUsername = 'Test';
+$mysqlUsername = 'andhofmt';
 
 
-$mysqlPassword = 'test';
+$mysqlPassword = '';
+
+
+$mysqlDB = 'test4';
+
+
+$mysqlPort = '3306';
 
 
 ?>

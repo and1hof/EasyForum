@@ -30,21 +30,24 @@
               <label>
                 <input type="password" name="mysqlPassword" placeholder="MySQL Password">
               </label>
-			  <label>
-                <input type="text" name="mysqlHost" placeholder="MySQL Host Name">
+			        <label>
+                <input type="text" name="mysqlDB" placeholder="MySQL Database (Must be Empty)">
+              </label>
+              <label>
+                <input type="text" name="mysqlPort" placeholder="MySQL Port Number (Default: 3306)">
               </label>
               <h5>Forum Admin</h5>
               <label>
                 <input type="text" name="adminUsername" placeholder="Admin Username">
               </label>
               <label>
+                <input type="text" name="adminEmail" placeholder="Admin Email">
+              </label>
+              <label>
                 <input type="password" name="adminPassword" placeholder="Admin Password">
               </label>
               <label>
                 <input type="password" name="adminPassword2" placeholder="Admin Password (Repeat)">
-              </label>
-			  <label>
-                <input type="text" name="adminEmail" placeholder="Admin Email">
               </label>
               <h5>Global Variables</h5>
               <label>
