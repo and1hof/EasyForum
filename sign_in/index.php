@@ -8,9 +8,10 @@
 
 <?php
   // first, check if the user is already signed in.
+  session_start();
   if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
   {
-      echo 'You are already signed in, you can <a href="signout.php">sign out</a> if you want.';
+      echo 'ERROR: You are already signed in!';
   }
 ?>
 
@@ -51,17 +52,16 @@
   }
   $sql = "SELECT userId, username, admin, moderator FROM users WHERE username = '".$_POST['username']."' AND password = '".sha1($_POST['password'])."';";
   $result = mysqli_query($database, $sql);
+  $confirm = mysqli_query($database, $sql);
   //$result = mysqli_fetch_array($result,MYSQLI_ASSOC);
   
   if (!$result) {
     echo 'ERROR: Sign in could not be proccessed. Try again later.';
   } else {
-    if (sizeof(mysqli_fetch_array($result, MYSQLI_ASSOC)) == 0) {
+    if (sizeof(mysqli_fetch_array($confirm, MYSQLI_ASSOC)) == 0) {
       echo 'ERROR: Username / Password combo incorrect. Please try again.';
     } else {
       // set the sign in to true.
-      session_start();
-      $_SESSION['signed_in'] = true;
 
       while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         $_SESSION['userId']     = $row['userId'];
@@ -69,7 +69,7 @@
         $_SESSION['admin']      = $row['admin'];
         $_SESSION['moderator']  = $row['moderator'];
       } // store some data about the user 
-      echo 'Sign in successful,'.$_SESSION['username']."!";
+      echo 'Sign in successful, '.$_SESSION['username']."!";
     }
   }
 }
