@@ -65,11 +65,11 @@ $database->query("CREATE TABLE threads (
 $database->query("CREATE TABLE users (
 	userId INT AUTO_INCREMENT,
 	username VARCHAR(20) NOT NULL,
-	password VARCHAR(20) NOT NULL,
+	password VARCHAR(250) NOT NULL,
 	email VARCHAR(30) NOT NULL,
 	avatar VARCHAR(250) DEFAULT '/avatar.png',
 	description VARCHAR(250),
-	administrator BOOLEAN NOT NULL DEFAULT 0,
+	admin BOOLEAN NOT NULL DEFAULT 0,
 	moderator BOOLEAN NOT NULL DEFAULT 0,
 	PRIMARY KEY(userId)
 )");
