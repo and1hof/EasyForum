@@ -22,6 +22,15 @@ $adminEmail     = $_POST['adminEmail'];
 $forumName      = $_POST['forumName'];
 
 /*
+ * Validate the inputs.
+*/
+if ($adminPassword != $adminPassword2) {
+	echo "ERROR: Passwords don't match!";
+	die;
+} else {
+	$adminPassword = sha1($adminPassword); // encrypt the password
+}
+/*
  * Connect to the database using the credentials provided.
 */
 $servername = getenv('IP');
@@ -40,11 +49,11 @@ if ($database->connect_error) {
 /* 
  * Set up the database tables.
 */
-$database->query("CREATE TABLE Moderator(
+$database->query("CREATE TABLE moderators (
 	moderatorId INT,
 	PRIMARY KEY(moderatorId))");
 	
-$database->query("CREATE TABLE Thread(
+$database->query("CREATE TABLE threads (
 	dateCreated DATE NOT NULL,
 	likes INT NOT NULL,
 	threadId INT,
@@ -53,19 +62,19 @@ $database->query("CREATE TABLE Thread(
 	PRIMARY KEY(threadId)
 )");
 
-$database->query("CREATE TABLE User (
+$database->query("CREATE TABLE users (
 	userId INT AUTO_INCREMENT,
 	username VARCHAR(20) NOT NULL,
 	password VARCHAR(20) NOT NULL,
 	email VARCHAR(30) NOT NULL,
 	avatar VARCHAR(250) DEFAULT '/avatar.png',
 	description VARCHAR(250),
-	administrator BOOLEAN NOT NULL,
-	moderator BOOLEAN NOT NULL,
+	administrator BOOLEAN NOT NULL DEFAULT 0,
+	moderator BOOLEAN NOT NULL DEFAULT 0,
 	PRIMARY KEY(userId)
 )");
 
-$database->query("CREATE TABLE threadComment(
+$database->query("CREATE TABLE threadComments (
 	commentId INT,
 	content VARCHAR(200) NOT NULL,
 	title VARCHAR(45) NOT NULL,
@@ -75,7 +84,7 @@ $database->query("CREATE TABLE threadComment(
 	PRIMARY KEY(commentId)
 )");
 
-$database->query("CREATE TABLE message(
+$database->query("CREATE TABLE messages (
 	messageId INT,
 	content VARCHAR(60),
 	fromUserId INT REFERENCES User(userId),
@@ -86,9 +95,10 @@ $database->query("CREATE TABLE message(
 /*
  * Generate admin user using provided credentials.
 */
-$cmd = "INSERT INTO User
+$cmd = "INSERT INTO users
     	VALUES(0 , '".$adminUsername."', '".$adminPassword."', '".$adminEmail."','empty','empty', 1, 0)"; 
-    	
+$database->query($cmd);
+
 /*
  * Configure config.php to reflect global data 
  * and provide confirmation that initial config was successful.

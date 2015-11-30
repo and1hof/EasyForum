@@ -14,7 +14,7 @@ $mysqlUsername = 'andhofmt';
 $mysqlPassword = '';
 
 
-$mysqlDB = 'test4';
+$mysqlDB = 'test8';
 
 
 $mysqlPort = '3306';
