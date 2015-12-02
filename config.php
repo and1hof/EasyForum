@@ -2,10 +2,10 @@
 <?php
 
 
-$forumName = 'TestForum';
+$forumName = 'TestForum2';
 
 
-$isConfigured = 'true';
+$isConfigured = 'false';
 
 
 $mysqlUsername = 'andhofmt';

@@ -56,7 +56,7 @@
 
  
               <center>
-                  <input type="submit" class="button">
+                  <input type="submit" class="button" value="Configure Forum">
               </center>
             </fieldset>
         </form>
