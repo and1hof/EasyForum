@@ -3,7 +3,12 @@
 <!-- HEADER -->
 <?php echo get_content('../components/header.php'); ?>
 <!-- NAV    -->
-<?php echo '<script>var forumName = "'.$forumName.'";</script>'; ?>
+<?php echo '<script>var forumName = "'.$forumName.'";var userI</script>'; ?>
+<?php session_start();
+  if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true) { echo get_content('../components/nav_user.php'); }
+  else { echo get_content('../components/nav.php'); }
+?>
+umName.'";</script>'; ?>
 <?php echo get_content('../components/nav.php'); ?>
 
 <div class="row">

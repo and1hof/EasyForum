@@ -48,6 +48,12 @@ echo "<script>window.location='/setup.php';</script>";
     $threadId    = $row['threadId'];
     $title       = $row['title'];
     $content     = $row['content'];
+    $id          = $row['userId'];
+  $sql = "SELECT username FROM users WHERE userId = ".$id.";";
+  $result2 = mysqli_query($database, $sql);
+  while ($row = mysqli_fetch_array($result2, MYSQLI_ASSOC)) {
+        $username     = $row['username'];
+    } // store some data about the user
     
     echo '<div class="small-12 columns">
             <div class="panel">
@@ -56,7 +62,7 @@ echo "<script>window.location='/setup.php';</script>";
                         <a class="th"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQLY7QoREZq_D68DE1dJF4g178hIxNW2fve63bsaiH79vMmy58KyMPhVA"  height="100%" width="100%"/></a>
                     </div>
                     <div class="small-10 columns">
-                        <h5><a href="/user?id=25">Author</a> | '.$dateCreated.'</h5>
+                        <h5>'.$title.' | <a href="/user?id='.$id.'">'.$username.'</a> | '.$dateCreated.'</h5>
                         <p>'.$content.'<a href="/post?id='.$threadId.'"> ... Read More...</a></p>
                     </div>
                 </div>
@@ -66,7 +72,9 @@ echo "<script>window.location='/setup.php';</script>";
   } 
   
 ?>
-
+<center>
+  <a href="/new_post"><button>New Post</button></a>
+</center>
 </div>
 
 <!-- FOOTER -->
