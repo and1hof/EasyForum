@@ -27,22 +27,45 @@ echo "<script>window.location='/setup.php';</script>";
           </a>
         </div>
     </div>
-    
+<?php
 
-        <div class="small-12 columns">
+  $servername = getenv('IP');
+  $username   = $mysqlUsername;
+  $password   = $mysqlPassword;
+  $database   = $mysqlDB;
+  $dbport     = $mysqlPort;
+  $database = new mysqli($servername, $username, $password, $database, $dbport);
+  if ($database->connect_error) {
+    echo "ERROR: Failed to connect to MySQL";
+	die;
+  }
+  $sql = "SELECT * FROM threads;";
+  $result = mysqli_query($database, $sql);
+  // for each post found
+  while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+    $dateCreated = $row['dateCreated'];
+    $likes       = $row['likes'];
+    $threadId    = $row['threadId'];
+    $title       = $row['title'];
+    $content     = $row['content'];
+    
+    echo '<div class="small-12 columns">
             <div class="panel">
                 <div class="row">
                     <div class="small-2 columns">
                         <a class="th"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQLY7QoREZq_D68DE1dJF4g178hIxNW2fve63bsaiH79vMmy58KyMPhVA"  height="100%" width="100%"/></a>
                     </div>
                     <div class="small-10 columns">
-                        <h5><a href="/user?id=25">Author</a></h5>
-                        <p>Teaser Text<a href="/post?id=25"> ... Read More...</a></p>
+                        <h5><a href="/user?id=25">Author</a> | '.$dateCreated.'</h5>
+                        <p>'.$content.'<a href="/post?id='.$threadId.'"> ... Read More...</a></p>
                     </div>
                 </div>
                 
             </div>
-        </div>
+        </div>';
+  } 
+  
+?>
 
 </div>
 

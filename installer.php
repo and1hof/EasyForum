@@ -58,6 +58,7 @@ $database->query("CREATE TABLE threads (
 	likes INT NOT NULL,
 	threadId INT,
 	title VARCHAR(45) NOT NULL,
+	content VARCHAR(2500) NOT NULL,
 	moderatorId INT REFERENCES Moderator(moderatorId),
 	PRIMARY KEY(threadId)
 )");
