@@ -1,9 +1,10 @@
 <!-- GLOBAL LAYOUT MANAGER -->
 <?php include('../application.php'); ?>
 <!-- HEADER -->
-<?php include('../components/header.php'); ?>
+<?php echo get_content('../components/header.php'); ?>
 <!-- NAV    -->
-<?php include('../components/nav.php'); ?>
+<?php echo '<script>var forumName = "'.$forumName.'";</script>'; ?>
+<?php echo get_content('../components/nav.php'); ?>
 
 <div class="row">
     <div class="small-12 columns">
