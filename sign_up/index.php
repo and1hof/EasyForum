@@ -1,15 +1,9 @@
 <!-- GLOBAL LAYOUT MANAGER -->
 <?php include('../application.php'); ?>
 <!-- HEADER -->
-<?php echo get_content('../components/header.php'); ?>
+<?php include('../components/header.php'); ?>
 <!-- NAV    -->
-<?php echo '<script>var forumName = "'.$forumName.'";var userI</script>'; ?>
-<?php session_start();
-  if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true) { echo get_content('../components/nav_user.php'); }
-  else { echo get_content('../components/nav.php'); }
-?>
-umName.'";</script>'; ?>
-<?php echo get_content('../components/nav.php'); ?>
+<?php include('../components/nav.php'); ?>
 
 <?php
   // first, check if the user is already signed in.
@@ -19,6 +13,7 @@ umName.'";</script>'; ?>
       echo 'ERROR: You are already signed in!';
   }
 ?>
+
 
 <?php if ($_SERVER['REQUEST_METHOD'] != 'POST') {
   echo'
@@ -88,7 +83,7 @@ $cmd = "INSERT INTO users
   	VALUES('".$usernum."', '".$name."', '".$passwordxx."', '".$email."', '', '', 0, 0)";  
 $stmt = $database->prepare($cmd);
 if($stmt->execute()) {
-	echo $database->affected_rows." successfull insert into the database";
+	echo $database->affected_rows." Signed Up Successfully!";
 } else {
 	echo "wasn't able to connect to the database";
 	die;

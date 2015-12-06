@@ -10,7 +10,6 @@
   session_start();
   if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
   {
-      echo 'ERROR: You are already signed in!';
   }
 ?>
 

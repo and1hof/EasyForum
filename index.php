@@ -72,9 +72,15 @@ echo "<script>window.location='/setup.php';</script>";
   } 
   
 ?>
-<center>
-  <a href="/new_post"><button>New Post</button></a>
-</center>
+<?php
+  $button = "";
+  if ($_SESSION['signed_in']) {
+    $button = '<center>
+                  <input type="submit" class="button" value="Sign In">
+              </center>';
+  }
+echo $button;
+?>
 </div>
 
 <!-- FOOTER -->

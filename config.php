@@ -8,7 +8,7 @@ $forumName = 'TestForum';
 $isConfigured = 'true';
 
 
-$mysqlUsername = 'dejarc';
+$mysqlUsername = 'andhofmt';
 
 
 $mysqlPassword = '';
