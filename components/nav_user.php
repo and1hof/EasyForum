@@ -13,6 +13,19 @@
     <ul class="right">
       <li><a href="../edit/index.php">Edit Profile</a></li>
     </ul>
+<<<<<<< HEAD
+    <?php
+      $curid = $_SESSION['userId']; 
+      if($curid == 1) {
+        echo 
+        '<ul class="right">
+          <li><a href="../destroy/index.php">Master Exploder</a></li>
+         </ul>'; 
+      }
+    
+    ?>
+=======
+>>>>>>> master
   </section>
   
 </nav>
