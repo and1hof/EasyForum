@@ -93,5 +93,3 @@ $database->close();
 }
 
 ?>
-<!-- FOOTER -->
-<?php echo get_content('../components/footer.php'); ?>
