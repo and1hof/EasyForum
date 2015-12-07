@@ -2,16 +2,16 @@
 <?php
 
 
-$forumName = 'TestForum';
+$forumName = 'EasyForum';
 
 
 $isConfigured = 'true';
 
 
-$mysqlUsername = 'andhofmt';
+$mysqlUsername = 'root';
 
 
-$mysqlPassword = '';
+$mysqlPassword = 'testtest';
 
 
 $mysqlDB = 'test';
