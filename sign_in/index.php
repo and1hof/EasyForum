@@ -69,7 +69,7 @@
         $_SESSION['moderator']  = $row['moderator'];
       } // store some data about the user 
       $_SESSION['signed_in'] = true;
-      echo 'Sign in successful, '.$_SESSION['username']."!";
+      echo '<meta http-equiv="refresh" content="0; url=/" />';
     }
   }
 }

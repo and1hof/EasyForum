@@ -21,14 +21,14 @@
           <form method="post" action="">
             <fieldset class="panel">
               <center>
-                <h1>update bio</h1><br>
+                <h1>Update Profile</h1><br>
               </center>
               <label>
-                <textarea name="bio" rows = "10" cols = "50" placeholder="Short Description(250 characters)"></textarea>
+                <textarea name="bio" rows = "10" cols = "50" placeholder="Biography (250 chars)"></textarea>
               </label>
               </center>
               <center>
-                  <input type="submit" class="button" value="Update Bio">
+                  <input type="submit" class="button" value="Update Profile">
               </center>
             </fieldset>
           </form>
@@ -53,6 +53,7 @@
     if(!($result = $database->query($query))) {
         echo "unsuccessful update of bio!";  
     }
+    echo '<meta http-equiv="refresh" content="0; url=/edit" />';
 }
 
 ?>

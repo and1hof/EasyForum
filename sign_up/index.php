@@ -14,6 +14,7 @@
   }
 ?>
 
+
 <?php if ($_SERVER['REQUEST_METHOD'] != 'POST') {
   echo'
   <div class="row">
@@ -21,22 +22,23 @@
           <form method="post" action="">
             <fieldset class="panel">
               <center>
-                <h1>Sign In</h1><br>
+                <h1>Sign Up</h1><br>
               </center>
               <label>
                 <input type="text"  name="name" placeholder="Username">
               </label>
+	      <label>
+	         <input type="text" name = "email" placeholder="Email">
+	      </label>
               <label>
                 <input type="password" name="password" placeholder="Password">
               </label>
               <label>
                 <input type="password"  name="confirmPassword" placeholder="Confirm Password">
               </label>
-              <label>
-                <input type="text"  name="email" placeholder="Email">
-              </label>
+            
               <center>
-                  <input type="submit" class="button" value="Sign In">
+                  <input type="submit" class="button" value="Sign Up">
               </center>
             </fieldset>
           </form>
@@ -82,7 +84,7 @@ $cmd = "INSERT INTO users
   	VALUES('".$usernum."', '".$name."', '".$passwordxx."', '".$email."', '', '', 0, 0)";  
 $stmt = $database->prepare($cmd);
 if($stmt->execute()) {
-	echo $database->affected_rows." successfull insert into the database";
+	echo '<meta http-equiv="refresh" content="0; url=/sign_in" />';
 } else {
 	echo "wasn't able to connect to the database";
 	die;

@@ -56,8 +56,10 @@ $database->query("CREATE TABLE moderators (
 $database->query("CREATE TABLE threads (
 	dateCreated DATE NOT NULL,
 	likes INT NOT NULL,
-	threadId INT,
+	threadId INT AUTO_INCREMENT,
 	title VARCHAR(45) NOT NULL,
+	content VARCHAR(2500) NOT NULL,
+	userId INT NOT NULL,
 	moderatorId INT REFERENCES Moderator(moderatorId),
 	PRIMARY KEY(threadId)
 )");
@@ -75,7 +77,7 @@ $database->query("CREATE TABLE users (
 )");
 
 $database->query("CREATE TABLE threadComments (
-	commentId INT,
+	commentId INT AUTO_INCREMENT,
 	content VARCHAR(200) NOT NULL,
 	title VARCHAR(45) NOT NULL,
 	threadId INT REFERENCES Thread(threadId),
