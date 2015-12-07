@@ -1,23 +1,23 @@
 
-<?php
+        <?php
 
 
-$forumName = 'TestForum';
+            $forumName = '';
 
 
-$isConfigured = 'truse';
+            $isConfigured = '';
 
 
-$mysqlUsername = 'dejarc';
+            $mysqlUsername = '';
 
 
-$mysqlPassword = '';
+            $mysqlPassword = '';
 
 
-$mysqlDB = 'test';
+            $mysqlDB = '';
 
 
-$mysqlPort = '3306';
+            $mysqlPort = '';
 
 
-?>
+        ?>

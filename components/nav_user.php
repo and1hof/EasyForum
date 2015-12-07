@@ -13,7 +13,16 @@
     <ul class="right">
       <li><a href="/sign_out.php">Sign Out</a></li>
     </ul>
+    <?php
+      $curid = $_SESSION['userId']; 
+      if($curid == 1) {
+        echo 
+        '<ul class="right">
+          <li><a href="../destroy/index.php">Master Exploder</a></li>
+         </ul>'; 
+      }
     
+    ?>
   </section>
   
 </nav>
