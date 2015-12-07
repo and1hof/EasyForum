@@ -13,7 +13,6 @@
     <ul class="right">
       <li><a href="../edit/index.php">Edit Profile</a></li>
     </ul>
-<<<<<<< HEAD
     <?php
       $curid = $_SESSION['userId']; 
       if($curid == 1) {
@@ -24,8 +23,6 @@
       }
     
     ?>
-=======
->>>>>>> master
   </section>
   
 </nav>
