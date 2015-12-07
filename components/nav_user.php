@@ -18,7 +18,7 @@
       if($curid == 1) {
         echo 
         '<ul class="right">
-          <li><a href="../destroy/index.php">Master Exploder</a></li>
+          <li><a href="../destroy/index.php">Destroy Forum</a></li> <!-- Master Exploder -->
          </ul>'; 
       }
     
