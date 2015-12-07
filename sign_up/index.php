@@ -14,6 +14,7 @@
   }
 ?>
 
+
 <?php if ($_SERVER['REQUEST_METHOD'] != 'POST') {
   echo'
   <div class="row">
@@ -82,7 +83,7 @@ $cmd = "INSERT INTO users
   	VALUES('".$usernum."', '".$name."', '".$passwordxx."', '".$email."', '', '', 0, 0)";  
 $stmt = $database->prepare($cmd);
 if($stmt->execute()) {
-	echo $database->affected_rows." successfull insert into the database";
+	echo $database->affected_rows." Signed Up Successfully!";
 } else {
 	echo "wasn't able to connect to the database";
 	die;
