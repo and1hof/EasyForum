@@ -62,5 +62,15 @@
         
 ?>
 
+<?php
+  $button = "";
+  if ($_SESSION['signed_in']) {
+    $button = '<center>
+                <a href="/new_comment?id='.$_GET['id'].'"><button>New Comment</button></a>
+              </center>';
+  }
+echo $button;
+?>
+
 <!-- FOOTER -->
 <?php echo get_content('../components/footer.php'); ?>
