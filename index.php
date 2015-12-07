@@ -76,7 +76,7 @@ echo "<script>window.location='/setup.php';</script>";
   $button = "";
   if ($_SESSION['signed_in']) {
     $button = '<center>
-                  <input type="submit" class="button" value="Sign In">
+                <a href="/new_post"><button>New Post</button></a>
               </center>';
   }
 echo $button;

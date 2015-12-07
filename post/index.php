@@ -41,7 +41,24 @@
                 </div>
                 
             </div>
-        </div>';
+        </div>'; ?>
+        
+  <?php
+  $sql = "SELECT * FROM threadComments WHERE threadId = ".$_GET['id'].";";
+  $result = mysqli_query($database, $sql);
+  // for each post found
+  while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+    echo '
+      <div class="row">
+        <div class="small-12 columns">
+            
+          <div class="panel">
+          '.$row['content'].'
+        </div>
+        </div>
+      </div>
+    ';
+    }
         
 ?>
 

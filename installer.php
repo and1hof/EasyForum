@@ -77,7 +77,7 @@ $database->query("CREATE TABLE users (
 )");
 
 $database->query("CREATE TABLE threadComments (
-	commentId INT,
+	commentId INT AUTO_INCREMENT,
 	content VARCHAR(200) NOT NULL,
 	title VARCHAR(45) NOT NULL,
 	threadId INT REFERENCES Thread(threadId),
