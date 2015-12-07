@@ -51,7 +51,7 @@
     $cmd = "INSERT INTO threadComments
         	VALUES(6, '".$pc."', 'title',".$_GET['id'].", ".$_SESSION['userId'].", '".date('Y-m-d H:i:s')."')";
     $database->query($cmd);
-    echo "Comment Added!";
+    echo '<meta http-equiv="refresh" content="0; url=/post?id='.$_GET['id'].'" />';
  
 }
 

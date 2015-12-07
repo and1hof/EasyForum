@@ -53,7 +53,7 @@
     $cmd = "INSERT INTO threads
         	VALUES('".date('Y-m-d H:i:s')."', 0, 0,'".$_POST['title']."', '".$_POST['content']."', '".$_SESSION['userId']."', null);"; 
     $database->query($cmd);
-    echo "Post created!";
+    echo '<meta http-equiv="refresh" content="0; url=/" />';
  
 }
 
