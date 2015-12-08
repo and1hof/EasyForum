@@ -1,23 +1,23 @@
 
-        <?php
+<?php
 
 
-            $forumName = '';
+$forumName = 'EasyForum';
 
 
-            $isConfigured = '';
+$isConfigured = 'true';
 
 
-            $mysqlUsername = '';
+$mysqlUsername = 'root';
 
 
-            $mysqlPassword = '';
+$mysqlPassword = 'testtest';
 
 
-            $mysqlDB = '';
+$mysqlDB = 'test';
 
 
-            $mysqlPort = '';
+$mysqlPort = '3306';
 
 
-        ?>
+?>

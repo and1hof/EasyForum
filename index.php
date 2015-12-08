@@ -39,7 +39,7 @@ echo "<script>window.location='/setup.php';</script>";
     echo "ERROR: Failed to connect to MySQL";
 	die;
   }
-  $sql = "SELECT * FROM threads ORDER BY dateCreated DESC;";
+  $sql = "SELECT * FROM threads;";
   $result = mysqli_query($database, $sql);
   // for each post found
   while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
