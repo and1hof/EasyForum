@@ -49,7 +49,7 @@
   }
   $pc =  $_POST['content'];
     $cmd = "INSERT INTO threadComments
-        	VALUES(6, '".$pc."', 'title',".$_GET['id'].", ".$_SESSION['userId'].", '".date('Y-m-d H:i:s')."')";
+        	VALUES(0, '".$pc."', 'title',".$_GET['id'].", ".$_SESSION['userId'].", '".date('Y-m-d H:i:s')."')";
     $database->query($cmd);
     echo '<meta http-equiv="refresh" content="0; url=/post?id='.$_GET['id'].'" />';
  
