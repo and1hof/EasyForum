@@ -43,6 +43,6 @@ This software is provided free of any license, and you are entirely responsible 
 
 ### SCREENSHOTS
 ![Configuration](http://i.imgur.com/RuUqgnP.jpg)
-![Feed](http://i.imgur.com/NCW6hPS.jpg)
+![Feed](http://i.imgur.com/gEeYqt6.jpg)
 
 
