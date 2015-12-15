@@ -42,6 +42,7 @@ This software utilizes JQuery (JavaScript) and Foundation (CSS) in addition to t
 This software is provided free of any license, and you are entirely responsible for how you choose to use it.
 
 ### SCREENSHOTS
-todo
+![Configuration](http://i.imgur.com/RuUqgnP.jpg)
+![Feed](http://i.imgur.com/NCW6hPS.jpg)
 
 
